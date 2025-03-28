@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:portfolio_app/view/projects/components/title_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../view model/responsive.dart';
 
 class AboutMeSection extends StatelessWidget {
@@ -53,7 +54,8 @@ class AboutMeSection extends StatelessWidget {
 
   final interests = const [
     'Mobile App Development',
-    'Painting', 'Gossiping',
+    'Painting',
+    'Gossiping',
     'Playing Badminton/Cricket',
   ];
 
@@ -78,10 +80,13 @@ class AboutMeSection extends StatelessWidget {
                   children: [
                     /// Skills Section
                     Text('Skills',
-                        style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                            fontSize: Responsive.isMobile(context) ? 22: 22,
-                            fontWeight: FontWeight.bold,
-                          )),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineLarge!
+                            .copyWith(
+                              fontSize: Responsive.isMobile(context) ? 22 : 22,
+                              fontWeight: FontWeight.bold,
+                            )),
                     const SizedBox(height: 10),
                     ...skills.map((skill) => Padding(
                           padding: const EdgeInsets.symmetric(vertical: 6.0),
@@ -91,8 +96,12 @@ class AboutMeSection extends StatelessWidget {
                                   width:
                                       Responsive.isMobile(context) ? 90 : 120,
                                   child: Text(skill['skill'] as String,
-                                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                                          fontSize: 16, ))),
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headlineLarge!
+                                          .copyWith(
+                                            fontSize: 16,
+                                          ))),
                               SizedBox(
                                 width: 10,
                               ),
@@ -114,9 +123,12 @@ class AboutMeSection extends StatelessWidget {
 
                     // / Experience Section
                     Text('Experience',
-                        style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                            fontSize: Responsive.isMobile(context) ? 22 : 22,
-                            fontWeight: FontWeight.bold,
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineLarge!
+                            .copyWith(
+                              fontSize: Responsive.isMobile(context) ? 22 : 22,
+                              fontWeight: FontWeight.bold,
                             )),
                     const SizedBox(height: 10),
                     ...experiences.map((exp) => Container(
@@ -182,12 +194,11 @@ class AboutMeSection extends StatelessWidget {
                                             const Text('• '),
                                             Expanded(
                                               child: Text(
-                                                  (exp['work'] as List)[i] ,  style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.grey
-                                          ), ),
-
-                                                   
+                                                (exp['work'] as List)[i],
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    color: Colors.grey),
+                                              ),
                                             )
                                           ],
                                         ),
@@ -199,8 +210,14 @@ class AboutMeSection extends StatelessWidget {
                                       children: List.generate(
                                           (exp['links'] as List).length, (i) {
                                         return InkWell(
-                                          onTap:
-                                              () {}, // TODO: implement link open
+                                          onTap: () {
+                                            String link =
+                                                (exp['links'] as List)[
+                                                    i]; // Safely get the link
+                                            print(link); // Debugging
+                                            launchUrl(Uri.parse(
+                                                link)); // Open the link
+                                          }, // TODO: implement link open
                                           child: Chip(
                                             label: Text('Link ${i + 1}'),
                                             avatar: const Icon(Icons.link,
@@ -222,16 +239,28 @@ class AboutMeSection extends StatelessWidget {
 
                     /// Interests Section
                     Text('Interests',
-                        style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                            fontSize: Responsive.isMobile(context) ? 22 : 22,
-                            fontWeight: FontWeight.w600 , )),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineLarge!
+                            .copyWith(
+                              fontSize: Responsive.isMobile(context) ? 22 : 22,
+                              fontWeight: FontWeight.w600,
+                            )),
                     const SizedBox(height: 10),
                     Wrap(
                       spacing: 10,
                       runSpacing: 10,
                       children: interests
                           .map((e) => Chip(
-                                label: Text(e , style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 14 , fontWeight: FontWeight.w500),),
+                                label: Text(
+                                  e,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium!
+                                      .copyWith(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w500),
+                                ),
                                 backgroundColor: Colors.blue.shade50,
                               ))
                           .toList(),
