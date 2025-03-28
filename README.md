@@ -1,6 +1,12 @@
 # portfolio_app
 
-A new Flutter project.
+This is my portfolio app which includes - 
+Home Screen: Brief introduction, profile picture, and bio.
+About Me Section: Skills, experience, and interests.
+Projects Section: Showcase 3-5 projects with details (name, description, technologies used).
+Contact Section: Email, phone number, and social media links.
+Navigation: Use a bottom navigation bar or drawer menu.
+Responsive Design: Ensure the app looks good on both mobile and tablet devices.
 
 ## Getting Started
 
