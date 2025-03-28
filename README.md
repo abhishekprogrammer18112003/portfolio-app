@@ -40,5 +40,6 @@ Responsive Design: Ensure the app looks good on both mobile and tablet devices.<
 ![alt text](image-14.png)
 
 
-## App Workflow 
+
+
 
