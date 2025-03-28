@@ -1,22 +1,44 @@
 # portfolio_app
 
-This is my portfolio app which includes - 
-Home Screen: Brief introduction, profile picture, and bio.
-About Me Section: Skills, experience, and interests.
-Projects Section: Showcase 3-5 projects with details (name, description, technologies used).
-Contact Section: Email, phone number, and social media links.
-Navigation: Use a bottom navigation bar or drawer menu.
-Responsive Design: Ensure the app looks good on both mobile and tablet devices.
+This is my portfolio app which includes -</br > 
+Home Screen: Brief introduction, profile picture, and bio.</br >
+About Me Section: Skills, experience, and interests.</br >
+Projects Section: Showcase 3-5 projects with details (name, description, technologies used).</br >
+Contact Section: Email, phone number, and social media links.</br >
+Navigation: Use a bottom navigation bar or drawer menu.</br >
+Responsive Design: Ensure the app looks good on both mobile and tablet devices.</br >
 
-## Getting Started
+## UI Design
 
-This project is a starting point for a Flutter application.
+#### Home Screen
 
-A few resources to get you started if this is your first Flutter project:
+![alt text](image-1.png) 
+![alt text](image-2.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### About Me Screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+
+#### Projects Screen
+
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+
+#### Contact Screen
+
+![alt text](image-11.png)
+![alt text](image-12.png)
+
+#### Drawer
+
+![alt text](image-13.png)
+![alt text](image-14.png)
+
+
+## App Workflow 
+
