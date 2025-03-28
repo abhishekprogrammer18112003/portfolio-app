@@ -8,6 +8,10 @@ Contact Section: Email, phone number, and social media links.</br >
 Navigation: Use a bottom navigation bar or drawer menu.</br >
 Responsive Design: Ensure the app looks good on both mobile and tablet devices.</br >
 
+#### App link
+
+https://drive.google.com/file/d/1qzRgg2D2GkXWbmV-rLxdk1J4q-qpC8F4/view?usp=drive_link
+
 ## UI Design
 
 #### Home Screen
